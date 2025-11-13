@@ -1,3 +1,5 @@
+// Задача 1
+
 export function capitalize(word: string): string {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
@@ -20,4 +22,12 @@ export function makeSignature(fullName: string): string {
   const patronymicInitial = patronymic ? patronymic[0].toUpperCase() + "." : "";
 
   return `${capitalize(lastName)} ${initials}${patronymicInitial}`;
+}
+
+// Задача 2
+
+// Функция для вычисления выражения
+
+export function calculateExpression(expression: string): string {
+    
 }

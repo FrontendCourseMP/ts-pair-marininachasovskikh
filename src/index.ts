@@ -1,3 +1,5 @@
+// Задача 1
+
 import { makeSignature } from "./utils.js";
 
 const input = document.querySelector<HTMLInputElement>('#fullname')!;
@@ -10,3 +12,18 @@ form.addEventListener("submit", (e) => {
   const result = makeSignature(fullName);
   output.textContent = result;
 });
+
+// Задача 2
+
+import { calculateExpression } from "./utils.js";
+
+const expressionInput = document.querySelector<HTMLInputElement>('#expression-input')!;
+const formCalculator = document.querySelector<HTMLFormElement>('#form-calculator')!;
+const outputCalculator = document.querySelector<HTMLOutputElement>('#calculator-result')!;
+
+formCalculator.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const expression = expressionInput.value;
+  const result = calculateExpression(expression);
+  outputCalculator.textContent = result;
+})
