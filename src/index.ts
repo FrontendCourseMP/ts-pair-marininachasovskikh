@@ -15,7 +15,8 @@ form.addEventListener("submit", (e) => {
 
 // Задача 2
 
-import { calculateExpression } from "./calculate.js";
+import { calculate } from "./calculate.js";
+import { formatNumber } from "./calculate.js";
 
 const expressionInput = document.querySelector<HTMLInputElement>('#expression-input')!;
 const formCalculator = document.querySelector<HTMLFormElement>('#form-calculator')!;
@@ -24,6 +25,10 @@ const outputCalculator = document.querySelector<HTMLOutputElement>('#calculator-
 formCalculator.addEventListener("submit", (e) => {
   e.preventDefault();
   const expression = expressionInput.value;
-  const result = calculateExpression(expression);
-  outputCalculator.textContent = result;
+  try {
+    const result = calculate(expression);
+    outputCalculator.textContent = formatNumber(result)
+  } catch (error) {
+    outputCalculator.textContent = (error as Error).message;
+  }
 })
