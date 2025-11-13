@@ -15,7 +15,7 @@ form.addEventListener("submit", (e) => {
 
 // Задача 2
 
-import { calculateExpression } from "./utils.js";
+import { calculateExpression } from "./calculate.js";
 
 const expressionInput = document.querySelector<HTMLInputElement>('#expression-input')!;
 const formCalculator = document.querySelector<HTMLFormElement>('#form-calculator')!;

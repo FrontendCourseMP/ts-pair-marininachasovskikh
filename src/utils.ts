@@ -24,10 +24,3 @@ export function makeSignature(fullName: string): string {
   return `${capitalize(lastName)} ${initials}${patronymicInitial}`;
 }
 
-// Задача 2
-
-// Функция для вычисления выражения
-
-export function calculateExpression(expression: string): string {
-    
-}
